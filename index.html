@@ -1,26 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P.A.T.K. - Your smart dog collar solution</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="container header-inner">
-            <a href="#" class="logo">P.A.T.K.</a>
-        </div>
+      <div class="container header-inner">
+        <a href="#" class="logo">P.A.T.K.</a>
+      </div>
     </header>
-</body>
+    <form id="signupForm">
+      <input name="Email" type="email" placeholder="Email" required />
+      <input name="Name" type="text" placeholder="Name" required />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const form = document.getElementById("signupForm");
 
-<form 
-  method="POST" 
-  action="YOUR_WEBAPP_URL"
->
-  <input name="Email" type="email" placeholder="Email" required>
-  <input name="Name" type="text" placeholder="Name" required>
-  <input name="Contact" type="tel" placeholder="Contact Number" required>
-  <button type="submit">Submit</button>
-</form>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyc-S5hETigKY2NlWFXwknfzFlrpjEjm8GfSZ9-Op-xFrzpl_1vnRxw3P4dksAirg/exec",
+          {
+            method: "POST",
+            body: formData,
+          },
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            alert("Form submitted successfully!");
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Something went wrong.");
+          });
+      });
+    </script>
+  </body>
+</html>
