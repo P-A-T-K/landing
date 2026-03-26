@@ -29,8 +29,12 @@ body {
   padding:0 20px;
 }
 
-header {
-  padding:25px 0;
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #555;
+  color: var(--card);
 }
 
 .logo {
@@ -100,6 +104,12 @@ header {
   margin:auto;
 }
 
+.navbar {
+  display: flex;
+	gap: var(--space-md);
+	list-style: none;
+}
+
 form input {
   width:100%;
   padding:12px;
@@ -137,11 +147,20 @@ footer {
 
 <body>
 
-<header class="container">
-  <a href="#" class="logo">P.A.T.K.</a>
-</header>
+<div class="header" id="Topheader">
+  <nav class="topbar" id="topbar">
+    <ul class="navbar" id="navbar">
+      <li><a href="" class="logo" style="color: var(--card) ;" onclick="document.getElementById('T').scrollIntoView({behavior:'smooth'})">P.A.T.K.</a></li>
+      <li><a href="" class="logo" style="color: var(--card);">About Us</a></li>
+      <li><a href="" class="logo" style="color: var(--card);">Our solution</a></li>
+      <li><a href="" class="logo" style="color: var(--card);">Scalability</a></li>
+      <li><a href="" class="logo" style="color: var(--card);">Business Model</a></li>
+      <li><a href="" class="logo" style="color: var(--card);">Join Early Access</a></li>
+    </ul>
+  </nav>
+</div>
 
-<section class="hero container">
+<section id="Top" class="hero container">
   <h1>Smarter Boundaries. No Shock.</h1>
   <p>
     RFID-powered proximity reinforcement designed to create flexible,
@@ -162,7 +181,7 @@ footer {
   </div>
 
   <h2>Our Solution</h2>
-  <div class="content-row">
+  <div id="solution" class="content-row">
     <img src="dog.png" alt="Solution Image Placeholder">
     <p>
       Our solution is a smart collar designed to humanely discourage dogs from crossing defined boundaries without the use of electric stimulation. Using RFID proximity detection, the collar delivers a consistent high-frequency audio cue when a boundary is approached. Over time, the dog begins to associate the sound with the restricted area, gradually reducing the need for repeated cues. Integrated GPS and mobile alerts keep owners informed in real time, while the system reinforces behavior automatically — creating a largely hands-off training approach. Rooted in established principles of classical conditioning, similar to those demonstrated in foundational behavioral studies, the goal is simple: consistent reinforcement that teaches boundary awareness through repetition rather than punishment.
@@ -170,16 +189,16 @@ footer {
   </div>
 
   <h2>Scalability</h2>
-  <div class="content-row">
+  <div id="scalability" class="content-row">
     <img src="scale.png" alt="Scalability Image Placeholder">
     <p>
       P.A.T.K. is designed as a scalable platform, not just a standalone collar. Beyond boundary reinforcement, the system is built for integration with smart dog doors and feeders, enabling automated access and scheduled feeding based on proximity and behavior. Camera integration allows owners to monitor activity in real time, while an onboard speaker can emit an alert signal if a dog becomes lost. GPS tracking provides location visibility, and in the event of signal failure, LoRaWAN compatibility enables collar-to-collar or network-based alert relays for extended range communication. Environmental sensors measuring temperature and humidity provide additional welfare insights, with all data securely transmitted back to a dedicated mobile application. The result is an expandable ecosystem that evolves from a training tool into a comprehensive smart companion system. 
     </p>
-    <p>#### Disclaimer: These additional eatures are in development. ####</p>
+    <p>#### Disclaimer: These additional features are in development. ####</p>
   </div>
 
   <h2>Business Model</h2>
-  <div class="content-row">
+  <div id="business-model" class="content-row">
     <img src="money.png" alt="Business Image Placeholder">
     <p>
     Our business model is designed to remain flexible and accessible. We are exploring both an affordable subscription-based model and a one-time purchase option, allowing owners to choose what best fits their needs. A subscription structure would support continuous feature updates, cloud services such as GPS tracking, LoRaWAN network access, camera integration, and data storage, while keeping upfront hardware costs lower. Alternatively, a one-time fee model would provide core functionality without ongoing commitments, appealing to users who prefer full ownership with minimal recurring expense. By offering both approaches, we can balance long-term platform development with accessibility, ensuring the system remains sustainable while delivering consistent value to pet owners.
