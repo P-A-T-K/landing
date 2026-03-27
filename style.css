@@ -1,23 +1,39 @@
 :root {
   --bg:#f4f7f6;
-  --primary:#2f3e46;
-  --accent:#84a98c;
+  --lighttxt:#2f3e46;
+  --btn:#48a85d;
+  --btnhover:#367e46;
   --soft:#cad2c5;
   --card:#ffffff;
+  --card-hover:#b8b8b8;
   --space-md:2rem;
+
+  --font-test : "Segoe UI", Courier, monospace;
+  --font-main : 'Tahoma', sans-serif;
 }
 
 * { box-sizing:border-box; margin:0; padding:0; }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-main);
   background: var(--bg);
-  color: var(--primary);
+  color: var(--lighttxt);
   line-height:1.7;
+}
+
+a {
+	color: var(--card);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--card-hover);
 }
 
 .header {
   position: sticky;
+  font-family: var(--font-test);
   top: 0;
   padding: 10px 16px;
   background: #555;
@@ -35,7 +51,7 @@ body {
   font-weight:700;
   font-size:22px;
   text-decoration:none;
-  color:var(--primary);
+  color:var(--card);
 }
 
 .navbar {
@@ -43,7 +59,6 @@ body {
 	gap: var(--space-md);
 	list-style: none;
 }
-
 
 .container {
   max-width:1100px;
@@ -69,13 +84,17 @@ body {
 }
 
 .cta-btn {
-  background:var(--accent);
+  background:var(--btn);
   color:white;
   padding:14px 28px;
   border:none;
   border-radius:8px;
   font-size:16px;
   cursor:pointer;
+}
+
+.cta-btn:hover {
+  background:var(--btnhover);
 }
 
 .section {
@@ -112,11 +131,9 @@ body {
   margin:auto;
 }
 
-.navbar {
-  display: flex;
-	gap: var(--space-md);
-	list-style: none;
-}
+/* 
+Form styles
+*/
 
 form input {
   width:100%;
@@ -130,7 +147,7 @@ form input {
 form button {
   width:100%;
   padding:14px;
-  background:var(--accent);
+  background:var(--btn);
   color:white;
   border:none;
   border-radius:8px;
@@ -138,11 +155,20 @@ form button {
   cursor:pointer;
 }
 
+form button:hover {
+  background:var(--btnhover);
+}
+
 footer {
   text-align:center;
   padding:50px 0;
   font-size:14px;
   opacity:0.7;
+}
+
+.f {
+    font-size:14px;
+    color:var(--lighttxt);
 }
 
 html {
