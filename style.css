@@ -177,6 +177,10 @@ footer {
     color:var(--lighttxt);
 }
 
+.freq:hover {
+    display:block;
+}
+
 html {
 	scroll-behavior: smooth;
 }
