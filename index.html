@@ -35,7 +35,7 @@
   </button>
 </section>
 
-<section id="about" class="section container">
+<section id="about" class="section container aboutus">
   <h2>About Us</h2>
   <div class="content-row">
     <img src="STE.jpg" alt="About Image Placeholder"> <!-- Placeholder image, needs replacements -->
@@ -95,5 +95,33 @@
   © 2026 P.A.T.K. – All rights reserved.
 </footer>
 
+<script>
+const form = document.getElementById("signupForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbyc-S5hETigKY2NlWFXwknfzFlrpjEjm8GfSZ9-Op-xFrzpl_1vnRxw3P4dksAirg/exec",
+    {
+      method: "POST",
+      body: formData,
+    },
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      message.style.color = "green";
+      message.textContent = "You're on the list.";
+      form.reset();
+    })
+    .catch((error) => {
+      message.style.color = "red";
+      message.textContent = "Submission failed. Try again.";
+    });
+});
+</script>
 </body>
 </html>

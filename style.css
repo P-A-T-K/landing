@@ -1,11 +1,13 @@
 :root {
+  --header-bg:#555555;  
   --bg:#f4f7f6;
+  --alt-bg:#bbbebd;
   --lighttxt:#2f3e46;
   --btn:#48a85d;
   --btnhover:#367e46;
   --soft:#cad2c5;
-  --card:#ffffff;
-  --card-hover:#b8b8b8;
+  --txt:#ffffff;
+  --txt-hover:#b8b8b8;
   --space-md:2rem;
 
   --font-test : "Segoe UI", Courier, monospace;
@@ -22,13 +24,13 @@ body {
 }
 
 a {
-	color: var(--card);
+	color: var(--txt);
 	text-decoration: none;
 	transition: color 0.2s ease;
 }
 
 a:hover {
-    color: var(--card-hover);
+    color: var(--txt-hover);
 }
 
 .header {
@@ -36,8 +38,8 @@ a:hover {
   font-family: var(--font-test);
   top: 0;
   padding: 10px 16px;
-  background: #555;
-  color: var(--card);
+  background: var(--header-bg);
+  color: var(--txt);
 }
 
 .header-inner {
@@ -51,7 +53,7 @@ a:hover {
   font-weight:700;
   font-size:22px;
   text-decoration:none;
-  color:var(--card);
+  color:var(--txt);
 }
 
 .navbar {
@@ -123,12 +125,16 @@ a:hover {
 }
 
 .card {
-  background:var(--card);
+  background:var(--txt);
   padding:50px 30px;
   border-radius:12px;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
   max-width:500px;
   margin:auto;
+}
+
+.aboutus {
+    background-color: var(--alt-bg);
 }
 
 /* 
