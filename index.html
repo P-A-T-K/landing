@@ -4,161 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>P.A.T.K. – Smart RFID Boundary Collar</title>
+<link rel="stylesheet" href="style.css">
 
-<style>
-:root {
-  --bg:#f4f7f6;
-  --primary:#2f3e46;
-  --accent:#84a98c;
-  --soft:#cad2c5;
-  --card:#ffffff;
-}
-
-* { box-sizing:border-box; margin:0; padding:0; }
-
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--primary);
-  line-height:1.7;
-}
-
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  padding: 10px 16px;
-  background: #555;
-  color: var(--card);
-}
-
-.logo {
-  font-weight:700;
-  font-size:22px;
-  text-decoration:none;
-  color:var(--primary);
-}
-
-.hero {
-  padding:90px 0;
-  text-align:center;
-}
-
-.hero h1 {
-  font-size:42px;
-  margin-bottom:20px;
-}
-
-.hero p {
-  max-width:650px;
-  margin:0 auto 30px;
-  font-size:18px;
-}
-
-.cta-btn {
-  background:var(--accent);
-  color:white;
-  padding:14px 28px;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-.section {
-  padding:80px 0;
-}
-
-.section h2 {
-  text-align:center;
-  margin-bottom:50px;
-  font-size:30px;
-}
-
-.content-row {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-  margin-bottom:60px;
-}
-
-.content-row img {
-  width:100%;
-  border-radius:12px;
-  background:var(--soft);
-  min-height:300px;
-}
-
-.card {
-  background:var(--card);
-  padding:50px 30px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  max-width:500px;
-  margin:auto;
-}
-
-.navbar {
-  display: flex;
-	gap: var(--space-md);
-	list-style: none;
-}
-
-form input {
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:14px;
-}
-
-form button {
-  width:100%;
-  padding:14px;
-  background:var(--accent);
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-footer {
-  text-align:center;
-  padding:50px 0;
-  font-size:14px;
-  opacity:0.7;
-}
-
-@media(max-width:900px){
-  .content-row {
-    grid-template-columns:1fr;
-  }
-}
-</style>
 </head>
 
 <body>
-
-<div class="header" id="Topheader">
-  <nav class="topbar" id="topbar">
-    <ul class="navbar" id="navbar">
-      <li><a href="" class="logo" style="color: var(--card) ;" onclick="document.getElementById('T').scrollIntoView({behavior:'smooth'})">P.A.T.K.</a></li>
-      <li><a href="" class="logo" style="color: var(--card);">About Us</a></li>
-      <li><a href="" class="logo" style="color: var(--card);">Our solution</a></li>
-      <li><a href="" class="logo" style="color: var(--card);">Scalability</a></li>
-      <li><a href="" class="logo" style="color: var(--card);">Business Model</a></li>
-      <li><a href="" class="logo" style="color: var(--card);">Join Early Access</a></li>
-    </ul>
-  </nav>
-</div>
+<header class="header">
+  <div class="header-inner" id="Topheader">
+    <a href="#" class="logo" style="color: var(--card) ;">P.A.T.K.</a>
+    <nav class="topbar" id="topbar">
+      <ul class="navbar" id="navbar">
+        <li><a href="#about" class="logo" style="color: var(--card);">About Us</a></li>
+        <li><a href="#solution" class="logo" style="color: var(--card);">Our solution</a></li>
+        <li><a href="#scalability" class="logo" style="color: var(--card);">Scalability</a></li>
+        <li><a href="#business-model" class="logo" style="color: var(--card);">Business Model</a></li>
+       <li><a href="#signup" class="logo" style="color: var(--card);">Join Early Access</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <section id="Top" class="hero container">
   <h1>Smarter Boundaries. No Shock.</h1>
@@ -171,35 +35,41 @@ footer {
   </button>
 </section>
 
-<section class="section container">
+<section id="about" class="section container">
   <h2>About Us</h2>
   <div class="content-row">
-    <img src="STE.jpg" alt="About Image Placeholder">
+    <img src="STE.jpg" alt="About Image Placeholder"> <!-- Placeholder image, needs replacements -->
     <p>
       We’re a small team — Stefanos, Dom, Oleksander, Isaac, and Connor — focused on rethinking how dogs learn to respect boundaries. Frustrated by the continued reliance on electric correction, we set out to develop a more considered, humane approach to boundary reinforcement. We believe training tools should guide behavior without causing harm, and that we shouldn’t rely on methods we wouldn’t accept ourselves. Our goal is to usher in a new era of smart integration in your pet’s life — combining technology, practicality, and a more thoughtful philosophy toward training.
     </p>
   </div>
+</section>
 
+<section id="solution" class="section container">
   <h2>Our Solution</h2>
-  <div id="solution" class="content-row">
-    <img src="dog.png" alt="Solution Image Placeholder">
+  <div class="content-row">
+    <img src="dog.png" alt="Solution Image Placeholder"> <!-- Placeholder image, needs replacements -->
     <p>
       Our solution is a smart collar designed to humanely discourage dogs from crossing defined boundaries without the use of electric stimulation. Using RFID proximity detection, the collar delivers a consistent high-frequency audio cue when a boundary is approached. Over time, the dog begins to associate the sound with the restricted area, gradually reducing the need for repeated cues. Integrated GPS and mobile alerts keep owners informed in real time, while the system reinforces behavior automatically — creating a largely hands-off training approach. Rooted in established principles of classical conditioning, similar to those demonstrated in foundational behavioral studies, the goal is simple: consistent reinforcement that teaches boundary awareness through repetition rather than punishment.
     </p>
   </div>
+</section>
 
+<section id="scalability" class="section container">
   <h2>Scalability</h2>
-  <div id="scalability" class="content-row">
-    <img src="scale.png" alt="Scalability Image Placeholder">
+  <div class="content-row">
+    <img src="scale.png" alt="Scalability Image Placeholder"> <!-- Placeholder image, needs replacements -->
     <p>
       P.A.T.K. is designed as a scalable platform, not just a standalone collar. Beyond boundary reinforcement, the system is built for integration with smart dog doors and feeders, enabling automated access and scheduled feeding based on proximity and behavior. Camera integration allows owners to monitor activity in real time, while an onboard speaker can emit an alert signal if a dog becomes lost. GPS tracking provides location visibility, and in the event of signal failure, LoRaWAN compatibility enables collar-to-collar or network-based alert relays for extended range communication. Environmental sensors measuring temperature and humidity provide additional welfare insights, with all data securely transmitted back to a dedicated mobile application. The result is an expandable ecosystem that evolves from a training tool into a comprehensive smart companion system. 
     </p>
     <p>#### Disclaimer: These additional features are in development. ####</p>
   </div>
+</section>
 
+<section id="business-model" class="section container">
   <h2>Business Model</h2>
-  <div id="business-model" class="content-row">
-    <img src="money.png" alt="Business Image Placeholder">
+  <div class="content-row">
+    <img src="money.png" alt="Business Image Placeholder"> <!-- Placeholder image, needs replacements -->
     <p>
     Our business model is designed to remain flexible and accessible. We are exploring both an affordable subscription-based model and a one-time purchase option, allowing owners to choose what best fits their needs. A subscription structure would support continuous feature updates, cloud services such as GPS tracking, LoRaWAN network access, camera integration, and data storage, while keeping upfront hardware costs lower. Alternatively, a one-time fee model would provide core functionality without ongoing commitments, appealing to users who prefer full ownership with minimal recurring expense. By offering both approaches, we can balance long-term platform development with accessibility, ensuring the system remains sustainable while delivering consistent value to pet owners.
     </p>
@@ -224,35 +94,6 @@ footer {
 <footer>
   © 2026 P.A.T.K. – All rights reserved.
 </footer>
-
-<script>
-const form = document.getElementById("signupForm");
-const message = document.getElementById("formMessage");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  fetch(
-    "https://script.google.com/macros/s/AKfycbyc-S5hETigKY2NlWFXwknfzFlrpjEjm8GfSZ9-Op-xFrzpl_1vnRxw3P4dksAirg/exec",
-    {
-      method: "POST",
-      body: formData,
-    },
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      message.style.color = "green";
-      message.textContent = "You're on the list.";
-      form.reset();
-    })
-    .catch((error) => {
-      message.style.color = "red";
-      message.textContent = "Submission failed. Try again.";
-    });
-});
-</script>
 
 </body>
 </html>

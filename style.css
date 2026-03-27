@@ -1,0 +1,156 @@
+:root {
+  --bg:#f4f7f6;
+  --primary:#2f3e46;
+  --accent:#84a98c;
+  --soft:#cad2c5;
+  --card:#ffffff;
+  --space-md:2rem;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  line-height:1.7;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #555;
+  color: var(--card);
+}
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 4rem;
+}
+
+.logo {
+  font-weight:700;
+  font-size:22px;
+  text-decoration:none;
+  color:var(--primary);
+}
+
+.navbar {
+	display: flex;
+	gap: var(--space-md);
+	list-style: none;
+}
+
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+
+.hero {
+  padding:90px 0;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero p {
+  max-width:650px;
+  margin:0 auto 30px;
+  font-size:18px;
+}
+
+.cta-btn {
+  background:var(--accent);
+  color:white;
+  padding:14px 28px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.section {
+  padding:80px 0;
+}
+
+.section h2 {
+  text-align:center;
+  margin-bottom:50px;
+  font-size:30px;
+}
+
+.content-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+  margin-bottom:60px;
+}
+
+.content-row img {
+  width:100%;
+  border-radius:12px;
+  background:var(--soft);
+  min-height:300px;
+}
+
+.card {
+  background:var(--card);
+  padding:50px 30px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  max-width:500px;
+  margin:auto;
+}
+
+.navbar {
+  display: flex;
+	gap: var(--space-md);
+	list-style: none;
+}
+
+form input {
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:14px;
+}
+
+form button {
+  width:100%;
+  padding:14px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+footer {
+  text-align:center;
+  padding:50px 0;
+  font-size:14px;
+  opacity:0.7;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media(max-width:900px){
+  .content-row {
+    grid-template-columns:1fr;
+  }
+}
