@@ -141,6 +141,14 @@ a:hover {
 Form styles
 */
 
+.section f0 {
+  text-align:center;
+  color:red;
+  margin-bottom:50px;
+  font-size:12px;
+}
+
+
 form input {
   width:100%;
   padding:12px;
