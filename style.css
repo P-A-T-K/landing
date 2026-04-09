@@ -1,5 +1,5 @@
 :root {
-  --header-bg:#555555;  
+  --header-bg:#814e00;  
   --bg:#f4f7f6;
   --alt-bg:#bbbebd;
   --lighttxt:#2f3e46;
@@ -7,6 +7,7 @@
   --btnhover:#367e46;
   --soft:#cad2c5;
   --txt:#ffffff;
+  --headertxt:#7EB1FF;
   --txt-hover:#b8b8b8;
   --space-md:2rem;
 
@@ -18,8 +19,9 @@
 
 body {
   font-family: var(--font-main);
-  background: var(--bg);
-  color: var(--lighttxt);
+  background-image: url("background.png");
+  background-repeat: repeat;
+  background-position: top left;
   line-height:1.7;
 }
 
@@ -39,7 +41,7 @@ a:hover {
   top: 0;
   padding: 10px 16px;
   background: var(--header-bg);
-  color: var(--txt);
+  color: var(--headertxt);
 }
 
 .header-inner {
@@ -53,7 +55,7 @@ a:hover {
   font-weight:700;
   font-size:22px;
   text-decoration:none;
-  color:var(--txt);
+  color:var(--headertxt);
 }
 
 .navbar {
@@ -137,6 +139,32 @@ a:hover {
     background-color: var(--alt-bg);
 }
 
+#Top {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 15px;
+}
+
+#about{
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 60px 15px;
+}
+
+#solution {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 60px 15px;
+}
+
+#scalability {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 15px;
+}
+
+#business-model {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 60px 15px;
+}
+
+
 /* 
 Form styles
 */
@@ -176,6 +204,12 @@ form button:hover {
 footer {
   text-align:center;
   padding:50px 0;
+  color:white;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px  1px 0 black,
+    1px  1px 0 black;
   font-size:14px;
   opacity:0.7;
 }
@@ -185,8 +219,46 @@ footer {
     color:var(--lighttxt);
 }
 
-.freq:hover {
-    display:block;
+
+/* Tooltip text */
+.freq .freqtxt {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+.freq .freqtxt::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.freq:hover .freqtxt {
+  visibility: visible;
+  opacity: 1;
 }
 
 html {
